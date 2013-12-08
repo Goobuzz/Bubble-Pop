@@ -6,9 +6,7 @@ require([
 	'goo/loaders/DynamicLoader',
 	'goo/math/Vector3',
 	'goo/util/rsvp',
-	'goo/entities/EntityUtils',
-	'goo/addons/howler/systems/HowlerSystem',
-	'goo/addons/howler/components/HowlerComponent'
+	'goo/entities/EntityUtils'
 ], function (
 	Game,
 	Time,
@@ -17,9 +15,7 @@ require([
 	DynamicLoader,
 	Vector3,
 	RSVP,
-	EntityUtils,
-	HowlerSystem,
-	HowlerComponent
+	EntityUtils
 ) {
 	'use strict';
 	function init() {
@@ -89,8 +85,6 @@ require([
 			// $('#instructionsButton').click(function(){}
 			// $('#creditsButton').click(function(){}
 
-			// setup sound system
-			Game.world.setSystem(new HowlerSystem());
 			// list of sounds
 			var sound = {};
 			// load a new sound 'sprite'
