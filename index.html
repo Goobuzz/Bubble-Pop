@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<title>Bubble Pop</title>
+
+<!-- disable native mobile pinch-to-zoom, replacing with the Goo Engine zoom -->
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+<meta property="og:title" content="Bubble Pop"/>
+<meta property="og:url" content="http://goote.ch/ixCP55_CTD6NlB0BzzsQLg/"/>
+<meta property="og:updated_time" content="2013-12-07T17:57:06.581038"/>
+<meta property="og:site_name" content="Goo Create"/>
+<meta property="og:type" content="website"/>
+
+<link rel="stylesheet" type="text/css" href="style/style.css">
+
+<script src="lib/jquery-1.10.2.min.js"></script>
+<script src="lib/howler.min.js"></script>
+<script src="lib/Tween.js"></script>
+<script src="lib/hammer.js"></script>
+<script src="lib/goo-require.js"></script>
+
+<script src="js/loadScene.js"></script>
+
+</head>
+
+<body>
+	<div id = "gui">
+		<img id = "cursor" />
+		<div id = "menu">Main Menu<br/>
+			<ul>
+				<li id = "playButton">Play</li>
+				<li id = "instructionsButton">Instructions</li>
+				<li id = "creditsButton">Credits</li>
+			</ul>
+		</div>
+		<div id = "instructionsMenu">
+
+		</div>
+		<div id = "creditsMenu">
+		</div>
+		<div id="loadingOverlay">
+			<div class="loadingMessage">
+				<h2>Loading...</h2>
+				<div class="progressBar">
+					<div class="progress"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="shareButtons">
+		<a href="https://www.facebook.com/sharer/sharer.php?u=" onclick="javascript:window.open(this.href+location.href,
+  this.href, 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=500');return false;"><img src="icons/facebook.png"></a>
+		<a href="https://plus.google.com/share?url=" onclick="javascript:window.open(this.href+location.href,
+  this.href, 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="icons/googleplus.png"></a>
+		<a href="https://twitter.com/share?url=" onclick="javascript:window.open(this.href+location.href,
+  this.href, 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"><img src="icons/twitter.png"></a>
+	<div id="shareButtons">
+	
+</body>
+</html>

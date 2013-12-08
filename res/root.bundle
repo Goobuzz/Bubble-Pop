@@ -1,0 +1,515 @@
+{
+    "entities/Camera.entity": {
+        "components": {
+            "camera": {
+                "far": 1000,
+                "fov": 45,
+                "near": 1
+            },
+            "transform": {
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "translation": [
+                    0,
+                    0,
+                    30
+                ]
+            }
+        },
+        "name": "View Cam",
+        "ref": "entities/Camera.entity"
+    },
+    "entities/PointLight.entity": {
+        "components": {
+            "light": {
+                "attenuate": true,
+                "color": [
+                    0.9545454545454546,
+                    0.38181818181818183,
+                    0.38181818181818183,
+                    1
+                ],
+                "direction": [
+                    0,
+                    0,
+                    0
+                ],
+                "intensity": 3,
+                "lightCookie": null,
+                "range": 50,
+                "shadowCaster": false,
+                "shadowSettings": {
+                    "darkness": 0,
+                    "far": 50,
+                    "fov": 55,
+                    "near": 1,
+                    "projection": "Perspective",
+                    "resolution": [
+                        256,
+                        256
+                    ],
+                    "shadowType": "VSM",
+                    "size": 400,
+                    "type": "Blur",
+                    "upVector": [
+                        0,
+                        1,
+                        0
+                    ]
+                },
+                "specularIntensity": 0.5,
+                "type": "PointLight"
+            },
+            "transform": {
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "translation": [
+                    0,
+                    0,
+                    20
+                ]
+            }
+        },
+        "name": "PointLight",
+        "ref": "entities/PointLight.entity"
+    },
+    "entities/Sphere.entity": {
+        "components": {
+            "meshData": {
+                "meshRef": null,
+                "shape": "Sphere",
+                "shapeOptions": {
+                    "radialSamples": 16,
+                    "textureMode": "Projected",
+                    "zSamples": 16
+                }
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [
+                    "materials/glass.material"
+                ],
+                "receiveShadows": true
+            },
+            "transform": {
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "hidden": false,
+        "name": "Bubble",
+        "ref": "entities/Sphere.entity"
+    },
+    "entities/Sphere_0.entity": {
+        "components": {
+            "meshData": {
+                "meshRef": null,
+                "shape": "Sphere",
+                "shapeOptions": {
+                    "radialSamples": 16,
+                    "textureMode": "Projected",
+                    "zSamples": 16
+                }
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [
+                    "materials/glass_0.material"
+                ],
+                "receiveShadows": true
+            },
+            "transform": {
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "translation": [
+                    -2.642899513244629,
+                    -2.9201607704162598,
+                    0.25
+                ]
+            }
+        },
+        "hidden": false,
+        "name": "FartBuble",
+        "ref": "entities/Sphere_0.entity"
+    },
+    "materials/glass.material": {
+        "blendState": {
+            "blendDst": "OneMinusSrcAlphaFactor",
+            "blendEquation": "AddEquation",
+            "blendSrc": "SrcAlphaFactor",
+            "blending": "CustomBlending"
+        },
+        "cullState": {
+            "cullFace": "Back",
+            "enabled": true,
+            "frontFace": "CCW"
+        },
+        "depthState": {
+            "enabled": true,
+            "write": false
+        },
+        "dualTransparency": true,
+        "name": "Glassy1",
+        "ref": "materials/glass.material",
+        "renderQueue": 2000,
+        "shaderRef": "GOO_ENGINE_SHADERS/uber",
+        "texturesMapping": {},
+        "thumbnail": "materials/images/glass_thumbnail.jpg",
+        "uniforms": {
+            "discardThreshold": {
+                "enabled": false,
+                "value": 0
+            },
+            "fresnel": {
+                "enabled": true,
+                "value": 0.57
+            },
+            "materialAmbient": {
+                "enabled": true,
+                "value": [
+                    0.08594019534184826,
+                    0.08479338842975209,
+                    0.1636363636363637,
+                    1
+                ]
+            },
+            "materialDiffuse": {
+                "enabled": true,
+                "value": [
+                    0.7636363636363637,
+                    1,
+                    0.9974214876033058,
+                    1
+                ]
+            },
+            "materialEmissive": {
+                "enabled": true,
+                "value": [
+                    0.0013223140495867858,
+                    0.09090909090909094,
+                    0,
+                    1
+                ]
+            },
+            "materialSpecular": {
+                "enabled": true,
+                "value": [
+                    0.9,
+                    0.3845454545454545,
+                    0.3845454545454545,
+                    1
+                ]
+            },
+            "materialSpecularPower": {
+                "enabled": true,
+                "value": 73
+            },
+            "normalMultiplier": {
+                "enabled": true,
+                "value": 1
+            },
+            "opacity": {
+                "enabled": true,
+                "value": 0.22
+            },
+            "reflectivity": {
+                "enabled": true,
+                "value": 1
+            }
+        }
+    },
+    "materials/glass_0.material": {
+        "blendState": {
+            "blendDst": "OneMinusSrcAlphaFactor",
+            "blendEquation": "AddEquation",
+            "blendSrc": "SrcAlphaFactor",
+            "blending": "CustomBlending"
+        },
+        "cullState": {
+            "cullFace": "Back",
+            "enabled": true,
+            "frontFace": "CCW"
+        },
+        "depthState": {
+            "enabled": true,
+            "write": false
+        },
+        "dualTransparency": true,
+        "name": "Glassy2",
+        "ref": "materials/glass_0.material",
+        "renderQueue": 2000,
+        "shaderRef": "GOO_ENGINE_SHADERS/uber",
+        "texturesMapping": {},
+        "thumbnail": "materials/images/glass_thumbnail.jpg",
+        "uniforms": {
+            "discardThreshold": {
+                "enabled": false,
+                "value": 0
+            },
+            "fresnel": {
+                "enabled": true,
+                "value": 0.57
+            },
+            "materialAmbient": {
+                "enabled": true,
+                "value": [
+                    0.04760330578512395,
+                    0.2909090909090909,
+                    0.026446280991735543,
+                    1
+                ]
+            },
+            "materialDiffuse": {
+                "enabled": true,
+                "value": [
+                    0.05950413223140497,
+                    0.40909090909090906,
+                    0,
+                    1
+                ]
+            },
+            "materialEmissive": {
+                "enabled": true,
+                "value": [
+                    0.1993851239669421,
+                    0.19999999999999996,
+                    0.0309090909090909,
+                    1
+                ]
+            },
+            "materialSpecular": {
+                "enabled": true,
+                "value": [
+                    1,
+                    0.9381818181818181,
+                    0,
+                    1
+                ]
+            },
+            "materialSpecularPower": {
+                "enabled": true,
+                "value": 73
+            },
+            "normalMultiplier": {
+                "enabled": true,
+                "value": 1
+            },
+            "opacity": {
+                "enabled": true,
+                "value": 0.22
+            },
+            "reflectivity": {
+                "enabled": true,
+                "value": 1
+            }
+        }
+    },
+    "posteffects/Bleach.posteffect": {
+        "enabled": false,
+        "name": "Bleach",
+        "options": {
+            "opacity": 1
+        },
+        "ref": "posteffects/Bleach.posteffect"
+    },
+    "posteffects/Bloom.posteffect": {
+        "enabled": false,
+        "name": "Bloom",
+        "options": {
+            "brightness": -80,
+            "contrast": -15,
+            "opacity": 100,
+            "size": 3.3
+        },
+        "ref": "posteffects/Bloom.posteffect"
+    },
+    "posteffects/Contrast.posteffect": {
+        "enabled": false,
+        "name": "Contrast",
+        "options": {
+            "brightness": 0,
+            "contrast": 0
+        },
+        "ref": "posteffects/Contrast.posteffect"
+    },
+    "posteffects/Grain.posteffect": {
+        "enabled": false,
+        "name": "Grain",
+        "options": {
+            "nIntensity": 50,
+            "sCount": 1024,
+            "sIntensity": 50
+        },
+        "ref": "posteffects/Grain.posteffect"
+    },
+    "posteffects/RgbShift.posteffect": {
+        "enabled": false,
+        "name": "RgbShift",
+        "options": {
+            "amount": 0.005,
+            "angle": 0
+        },
+        "ref": "posteffects/RgbShift.posteffect"
+    },
+    "posteffects/Sepia.posteffect": {
+        "enabled": false,
+        "name": "Sepia",
+        "options": {
+            "amount": 100
+        },
+        "ref": "posteffects/Sepia.posteffect"
+    },
+    "posteffects/Vignette.posteffect": {
+        "enabled": false,
+        "name": "Vignette",
+        "options": {
+            "darkness": 1.5,
+            "offset": 1
+        },
+        "ref": "posteffects/Vignette.posteffect"
+    },
+    "project.project": {
+        "backgroundColor": [
+            0,
+            0,
+            0,
+            1
+        ],
+        "created": "2013-12-07T17:57:06.581038",
+        "deleted": false,
+        "edit": [],
+        "entityRefs": [
+            "entities/Sphere.entity",
+            "entities/Camera.entity",
+            "entities/PointLight.entity",
+            "entities/Sphere_0.entity"
+        ],
+        "fogColor": [
+            1,
+            1,
+            1
+        ],
+        "fogFar": 1000,
+        "fogNear": 0,
+        "globalAmbient": [
+            0,
+            0,
+            0
+        ],
+        "groupRefs": [
+            "root.group"
+        ],
+        "id": "ixCP55_CTD6NlB0BzzsQLg",
+        "licenseType": "CC0",
+        "modified": "2013-12-07T17:57:06.581038",
+        "name": "Bubble Pop",
+        "originalLicenseType": null,
+        "own": [
+            "h9AeW1X3S1WZYADWuViCyw"
+        ],
+        "parent": null,
+        "posteffectRefs": [
+            "posteffects/Sepia.posteffect",
+            "posteffects/Bloom.posteffect",
+            "posteffects/Grain.posteffect",
+            "posteffects/Contrast.posteffect",
+            "posteffects/RgbShift.posteffect",
+            "posteffects/Vignette.posteffect",
+            "posteffects/Bleach.posteffect"
+        ],
+        "public": true,
+        "publishedURL": "http://goote.ch/ixCP55_CTD6NlB0BzzsQLg",
+        "ref": "project.project",
+        "screenshot": "images/screenshot.png",
+        "shareButtons": true,
+        "skybox": {
+            "attribution": {
+                "link": "http://www.3delyvisions.com/",
+                "name": "3DElyvisions"
+            },
+            "environmentType": 1,
+            "imageUrls": [
+                "GOO_ASSET_LIBRARY/images/elyvisions/sky20/righttron.jpg",
+                "GOO_ASSET_LIBRARY/images/elyvisions/sky20/lefttron.jpg",
+                "GOO_ASSET_LIBRARY/images/elyvisions/sky20/uptron.jpg",
+                "GOO_ASSET_LIBRARY/images/elyvisions/sky20/downtron.jpg",
+                "GOO_ASSET_LIBRARY/images/elyvisions/sky20/fronttron.jpg",
+                "GOO_ASSET_LIBRARY/images/elyvisions/sky20/backtron.jpg"
+            ],
+            "ref": "environment/Tron.skybox",
+            "rotation": 0,
+            "shape": "Box"
+        },
+        "useFog": false,
+        "view": [],
+        "weather": {
+            "snow": {
+                "enabled": false,
+                "height": 25,
+                "rate": 10,
+                "velocity": 10
+            }
+        }
+    },
+    "root.group": {
+        "libraryRefs": [
+            "entities/Sphere.entity",
+            "materials/glass.material",
+            "entities/Camera.entity",
+            "posteffects/Sepia.posteffect",
+            "posteffects/Bloom.posteffect",
+            "posteffects/Grain.posteffect",
+            "posteffects/Contrast.posteffect",
+            "posteffects/RgbShift.posteffect",
+            "posteffects/Vignette.posteffect",
+            "posteffects/Bleach.posteffect",
+            "entities/PointLight.entity",
+            "images/screenshot.png",
+            "entities/Sphere_0.entity",
+            "materials/glass_0.material"
+        ],
+        "name": "root",
+        "ref": "root.group"
+    }
+}
